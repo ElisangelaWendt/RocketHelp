@@ -7,7 +7,7 @@ import firestore from '@react-native-firebase/firestore'
 import { OrderFirestoreDTO } from "../DTOs/OrderFirestoreDTO";
 import { DateFormat } from '../utils/FirestoreDateFormat'
 import { Loading } from "../components/Loading";
-import { CircleWavyCheck, Clipboard, DesktopTower, Hourglass } from "phosphor-react-native";
+import { CircleWavyCheck, ClipboardText, DesktopTower, Hourglass } from "phosphor-react-native";
 import { CardDetails } from "../components/CardDetails";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
@@ -121,12 +121,12 @@ export function Details() {
           title="Equipamento"
           description={`Patrimônio ${order.patrimony}`}
           icon={DesktopTower}
-          footer={order.when}
         />
         <CardDetails
           title="Descrição do problema"
           description={order.description}
-          icon={Clipboard}
+          icon={ClipboardText}
+          footer={`Registrado em ${order.when}`}
         />
         <CardDetails
           title="Solução"
